@@ -6,7 +6,8 @@ import seaborn as sns
 # Load the prepared dataset
 @st.cache_data
 def load_data():
-    data = pd.read_csv('dashboard_data.csv')
+    url = "https://raw.githubusercontent.com/mthayyibUnp/submission/69e3088043bf5ee1f22d6e3a6a46c80f198f4c0c/Dashboard/dashboard_data.csv"
+    data = pd.read_csv(url)
     data['Date'] = pd.to_datetime(data['Date'])
     return data
 
